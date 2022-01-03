@@ -1,0 +1,17 @@
+.calculator {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1.25fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  padding: 3rem;
+  min-height: 100vh;
+}
+
+.calculator__output {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+  padding: 1rem;
+  color: white;
+  background-color: #858693;
+  text-align: right;
+}
