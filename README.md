@@ -29,8 +29,8 @@ To get a local copy up and running follow these simple example steps:
 choose **_download zip_** button.<br> 3- After download, extract the zip file
 and you have the project running on your machine.<br> 4- You can also clone the
 project using **`git clone`** command.<br> 5- After downloading or cloning the
-project use the command **`npm i`** to install all Node packages then
-**`npm start`** to run the project.
+project use the command **`npm i`** to install all Node packages 6- After
+installing the node packages use **`npm start`** to run the project.
 
 ### Prerequisites
 
