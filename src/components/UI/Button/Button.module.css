@@ -1,0 +1,16 @@
+.button {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.zero {
+  grid-column: 1 / span 2;
+}
+
+.orange-background {
+  background-color: #f5913e;
+}
+
+.gray-background {
+  background-color: #e0e0e0;
+}
