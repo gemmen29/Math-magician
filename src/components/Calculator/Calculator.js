@@ -1,5 +1,4 @@
-/* eslint-disable react/prefer-stateless-function */
-import React from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Calculator.module.css';
 import Button from '../UI/Button/Button';
 import calculate from '../../logic/calculate';
@@ -101,56 +100,49 @@ const buttons = [
     backgroundColor: 'orange',
   },
 ];
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.buttonsClickHandler = this.buttonsClickHandler.bind(this);
-    this.state = {
-      currentObject: {
-        total: null,
-        next: null,
-        operation: null,
-      },
-    };
-  }
 
-  buttonsClickHandler(e) {
-    const { currentObject } = this.state;
+const Calculator = () => {
+  const [currentObject, setCurrentObject] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+  const [inputValue, setInputValue] = useState('0');
+
+  const buttonsClickHandler = (e) => {
     const obj = calculate(currentObject, e.target.textContent);
-    this.setState({ currentObject: obj });
-  }
+    setCurrentObject(obj);
+  };
 
-  render() {
-    const { currentObject } = this.state;
-
-    let inputValue = `${currentObject.total ?? ''}${
-      currentObject.operation ?? ''
-    }${currentObject.next ?? ''}`;
-
-    if (inputValue.length === 0) {
-      inputValue = '0';
+  useEffect(() => {
+    let value = `${currentObject.total ?? ''}${currentObject.operation ?? ''}${
+      currentObject.next ?? ''
+    }`;
+    if (value.length === 0) {
+      value = '0';
     }
+    setInputValue(value);
+  }, [currentObject]);
 
-    return (
-      <>
-        <div className={styles.calculator}>
-          <input
-            className={styles.calculator__output}
-            value={inputValue}
-            disabled
+  return (
+    <>
+      <div className={styles.calculator}>
+        <input
+          className={styles.calculator__output}
+          value={inputValue}
+          disabled
+        />
+        {buttons.map((button) => (
+          <Button
+            key={button.id}
+            text={button.text}
+            backgroundColor={button.backgroundColor}
+            onClick={buttonsClickHandler}
           />
-          {buttons.map((button) => (
-            <Button
-              key={button.id}
-              text={button.text}
-              backgroundColor={button.backgroundColor}
-              onClick={this.buttonsClickHandler}
-            />
-          ))}
-        </div>
-      </>
-    );
-  }
-}
+        ))}
+      </div>
+    </>
+  );
+};
 
 export default Calculator;
