@@ -5,7 +5,7 @@ import styles from './Button.module.css';
 
 class Button extends React.Component {
   render() {
-    const { text, backgroundColor } = this.props;
+    const { text, backgroundColor, onClick } = this.props;
     return (
       <button
         className={`${styles.button} ${text === '0' ? styles.zero : ''} ${
@@ -14,6 +14,7 @@ class Button extends React.Component {
             : styles['orange-background']
         }`}
         type="button"
+        onClick={onClick}
       >
         {text}
       </button>
@@ -24,6 +25,7 @@ class Button extends React.Component {
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;
