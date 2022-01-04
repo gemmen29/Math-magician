@@ -111,7 +111,9 @@ const Calculator = () => {
 
   const buttonsClickHandler = (e) => {
     const obj = calculate(currentObject, e.target.textContent);
-    setCurrentObject(obj);
+    if (obj.total !== undefined || obj.next !== undefined) {
+      setCurrentObject(obj);
+    }
   };
 
   useEffect(() => {
