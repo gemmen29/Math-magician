@@ -110,9 +110,16 @@ const Calculator = () => {
   const [inputValue, setInputValue] = useState('0');
 
   const buttonsClickHandler = (e) => {
-    const obj = calculate(currentObject, e.target.textContent);
-    if (obj.total !== undefined || obj.next !== undefined) {
-      setCurrentObject(obj);
+    const valueObject = calculate(currentObject, e.target.textContent);
+
+    if (valueObject.total?.includes('divide by 0.') && valueObject.operation) {
+      delete valueObject.total;
+      delete valueObject.next;
+    }
+
+    console.log(valueObject);
+    if (valueObject.total !== undefined || valueObject.next !== undefined) {
+      setCurrentObject(valueObject);
     }
   };
 
