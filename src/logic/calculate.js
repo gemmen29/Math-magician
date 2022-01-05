@@ -40,6 +40,14 @@ export default function calculate(obj, buttonName) {
         total: null,
       };
     }
+
+    if (obj.total) {
+      return {
+        next: obj.total + buttonName,
+        total: null,
+      };
+    }
+
     return {
       next: buttonName,
       total: null,
