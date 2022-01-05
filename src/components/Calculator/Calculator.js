@@ -117,7 +117,6 @@ const Calculator = () => {
       delete valueObject.next;
     }
 
-    console.log(valueObject);
     if (valueObject.total !== undefined || valueObject.next !== undefined) {
       setCurrentObject(valueObject);
     }
