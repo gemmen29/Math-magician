@@ -113,8 +113,8 @@ const Calculator = () => {
     const valueObject = calculate(currentObject, e.target.textContent);
 
     if (valueObject.total?.includes('divide by 0.') && valueObject.operation) {
-      delete valueObject.total;
-      delete valueObject.next;
+      valueObject.total = null;
+      valueObject.operation = null;
     }
 
     if (valueObject.total !== undefined || valueObject.next !== undefined) {
