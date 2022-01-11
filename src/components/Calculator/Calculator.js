@@ -133,7 +133,8 @@ const Calculator = () => {
   }, [currentObject]);
 
   return (
-    <>
+    <div className={styles.container}>
+      <h2>Let&#39;s do some math!</h2>
       <div className={styles.calculator}>
         <input
           className={styles.calculator__output}
@@ -149,7 +150,7 @@ const Calculator = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
