@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 2.5em;
+}
+
+.home__header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home__p {
+  font-size: 1.2rem;
+}
