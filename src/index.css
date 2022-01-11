@@ -12,7 +12,12 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
 
@@ -46,6 +51,11 @@ ol {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
 }
 
 /* A elements that don't have a class get default styles */
@@ -87,9 +97,4 @@ select {
 .active {
   text-decoration: none;
   color: black;
-}
-
-a {
-  text-decoration: none;
-  color: blueviolet;
 }
