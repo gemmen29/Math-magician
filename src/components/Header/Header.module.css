@@ -3,12 +3,18 @@
   position: fixed;
   top: 0;
   padding: 0.2rem 1.3rem;
+  background-color: #b5b1b193;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav h1 {
+  font-size: 1.8rem;
+  color: #453e3e;
 }
 
 .nav .pages {
