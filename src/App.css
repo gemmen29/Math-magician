@@ -1,8 +1,10 @@
 .App {
-  background-color: white;
+  background-color: #1e1e1ec1;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 2vw;
+  padding: 3vw;
+  padding-top: 5vw;
 }

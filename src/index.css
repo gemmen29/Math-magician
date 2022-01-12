@@ -1,22 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda&display=swap');
+
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   width: 100vw;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: 'Courgette', cursive;
+  font-family: 'Merienda', cursive;
 }
 
 code {
@@ -61,6 +53,11 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -95,4 +92,9 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.active {
+  text-decoration: none;
+  color: black;
 }

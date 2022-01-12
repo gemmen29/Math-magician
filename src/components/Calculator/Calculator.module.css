@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+}
+
 .calculator {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
