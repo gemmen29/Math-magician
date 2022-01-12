@@ -30,4 +30,38 @@ describe('Calculate file tests', () => {
     obj = calculate(obj, '=');
     expect(obj.total).toBe('30');
   });
+
+  test('Division', () => {
+    obj = calculate(obj, '4');
+    obj = calculate(obj, '÷');
+    obj = calculate(obj, '2');
+    obj = calculate(obj, '=');
+    expect(obj.total).toBe('2');
+  });
+
+  test('Division by Zero', () => {
+    obj = calculate(obj, '4');
+    obj = calculate(obj, '÷');
+    obj = calculate(obj, '0');
+    obj = calculate(obj, '=');
+    expect(obj.total).toBe('Can\'t divide by 0.');
+  });
+
+  test('Module', () => {
+    obj = calculate(obj, '4');
+    obj = calculate(obj, '%');
+    obj = calculate(obj, '2');
+    obj = calculate(obj, '=');
+    expect(obj.total).toBe('0');
+  });
+
+  test('Reset', () => {
+    obj = calculate(obj, '4');
+    obj = calculate(obj, '%');
+    obj = calculate(obj, '2');
+    obj = calculate(obj, 'AC');
+    expect(obj.total).toBe(null);
+  });
+
+
 });
