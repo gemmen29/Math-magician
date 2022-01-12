@@ -1,5 +1,7 @@
 import React from 'react';
-import { render, fireEvent, waitFor, screen } from '@testing-library/react';
+import {
+  render, fireEvent, waitFor, screen,
+} from '@testing-library/react';
 import Calculator from '../components/Calculator/Calculator';
 
 describe('Test Calculator render', () => {
@@ -10,11 +12,10 @@ describe('Test Calculator render', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  test('Test Calculator',async () => {
-    render(<Calculator />,);
-    fireEvent.click(screen.getByText('5'))
-    const result = await waitFor(() => screen.getByTestId('result'))
-    expect(result.value).toBe('5')
-
+  test('Test Calculator', async () => {
+    render(<Calculator />);
+    fireEvent.click(screen.getByText('5'));
+    const result = await waitFor(() => screen.getByTestId('result'));
+    expect(result.value).toBe('5');
   });
 });
