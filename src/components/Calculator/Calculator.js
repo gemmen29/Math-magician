@@ -139,6 +139,7 @@ const Calculator = () => {
         <input
           className={styles.calculator__output}
           value={inputValue}
+          data-testid="result"
           disabled
         />
         {buttons.map((button) => (
