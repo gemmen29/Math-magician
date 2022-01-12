@@ -62,6 +62,4 @@ describe('Calculate file tests', () => {
     obj = calculate(obj, 'AC');
     expect(obj.total).toBe(null);
   });
-
-
 });

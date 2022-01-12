@@ -33,7 +33,6 @@ describe('Operate file tests', () => {
 
   test('Module by Zero', () => {
     const result = operate(6, 0, '%');
-    expect(result).toBe(`Can't find modulo as can't divide by 0.`);
+    expect(result).toBe('Can\'t find modulo as can\'t divide by 0.');
   });
-
 });
