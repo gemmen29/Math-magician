@@ -19,7 +19,9 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](https://gemmen29.github.io/Math-magician/)
+[Live Demo Link](https://gemmen29.github.io/Math-magician/) <br />
+[Heroku Demo Link](https://math-magician-500.herokuapp.com/) <br />
+[Netlify Demo Link](https://math-magician-500.netlify.app/) <br />
 
 ## Getting Started
 
